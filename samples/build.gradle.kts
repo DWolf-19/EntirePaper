@@ -11,7 +11,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("org.dwolf19.samples.PaperDownload")
+    mainClass.set("org.dwolf19.samples.Paper")
 }
 
 java {
