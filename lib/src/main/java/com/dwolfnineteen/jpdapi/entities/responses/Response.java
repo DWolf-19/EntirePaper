@@ -1,4 +1,4 @@
-package org.dwolf19.jpdapi.entities.responses;
+package com.dwolfnineteen.jpdapi.entities.responses;
 
 import com.google.gson.annotations.SerializedName;
 import org.jetbrains.annotations.NotNull;

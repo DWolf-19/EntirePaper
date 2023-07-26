@@ -1,4 +1,4 @@
-package org.dwolf19.jpdapi.exceptions;
+package com.dwolfnineteen.jpdapi.exceptions;
 
 import org.jetbrains.annotations.NotNull;
 
