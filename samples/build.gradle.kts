@@ -20,7 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 plugins {
-    application
+    java
 }
 
 repositories {
@@ -29,10 +29,6 @@ repositories {
 
 dependencies {
     implementation(project(":lib"))
-}
-
-application {
-    mainClass.set("com.dwolfnineteen.samples.Paper")
 }
 
 java {
