@@ -19,26 +19,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.dwolfnineteen.jpdapi.entities.responses;
+package com.dwolfnineteen.jpdapi.entities;
 
 import com.google.gson.annotations.SerializedName;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class Response {
-    @SerializedName("project_id")
-    protected String projectID;
+public class Error {
+    @SerializedName("error")
+    private String errorMessage;
 
-    @SerializedName("project_name")
-    protected String projectName;
-
-    @NotNull
-    public String getProjectID() {
-        return projectID;
-    }
-
-    @NotNull
-    public String getProjectName() {
-        return projectName;
+    @Nullable
+    public String getErrorMessage() {
+        return errorMessage;
     }
 }
