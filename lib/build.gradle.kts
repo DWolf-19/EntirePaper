@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2023 DWolf Nineteen & The JPD-API contributors
+Copyright (c) 2023 DWolf Nineteen & The EntirePaper contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2023 DWolf Nineteen & The JPD-API contributors
+Copyright (c) 2023 DWolf Nineteen & The EntirePaper contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,9 +19,26 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.dwolfnineteen.samples;
+package com.dwolfnineteen.entirepaper.entities.responses;
 
-public class PaperDownloadSample {
-    public static void main(String[] args) {
+import com.google.gson.annotations.SerializedName;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+public abstract class Response {
+    @SerializedName("project_id")
+    protected String projectID;
+
+    @SerializedName("project_name")
+    protected String projectName;
+
+    @NotNull
+    public String getProjectID() {
+        return projectID;
+    }
+
+    @NotNull
+    public String getProjectName() {
+        return projectName;
     }
 }

@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2023 DWolf Nineteen & The JPD-API contributors
+Copyright (c) 2023 DWolf Nineteen & The EntirePaper contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,12 +19,51 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.dwolfnineteen.jpdapi.exceptions;
+package com.dwolfnineteen.entirepaper.entities;
 
 import org.jetbrains.annotations.NotNull;
 
-public class BuildNotFoundException extends APIException {
-    public BuildNotFoundException(@NotNull String build) {
-        super(String.format("Build '%s' not found", build));
+import java.util.List;
+
+public class VersionGroupBuild {
+    private String version;
+    private int build;
+    private String time;
+    private Channel channel;
+    private boolean promoted;
+    private List<Change> changes;
+    private List<Download> downloads;
+
+    @NotNull
+    public String getVersion() {
+        return version;
+    }
+
+    public int getBuild() {
+        return build;
+    }
+
+    @NotNull
+    public String getTime() {
+        return time;
+    }
+
+    @NotNull
+    public Channel getChannel() {
+        return channel;
+    }
+
+    public boolean isPromoted() {
+        return promoted;
+    }
+
+    @NotNull
+    public List<Change> getChanges() {
+        return changes;
+    }
+
+    @NotNull
+    public List<Download> getDownloads() {
+        return downloads;
     }
 }
