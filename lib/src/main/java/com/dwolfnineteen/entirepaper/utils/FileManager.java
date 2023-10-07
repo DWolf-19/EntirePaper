@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2023 DWolf Nineteen & The JPD-API contributors
+Copyright (c) 2023 DWolf Nineteen & The EntirePaper contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,22 +19,20 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.dwolfnineteen.jpdapi.utils;
+package com.dwolfnineteen.entirepaper.utils;
 
-import com.google.gson.Gson;
 import org.jetbrains.annotations.NotNull;
 
-import java.lang.reflect.Type;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
-public class JsonParser {
-    private static final Gson gson;
+public class FileManager {
+    public static void toFile(byte[] buffer, @NotNull String outputPath) {
+        try (FileOutputStream file = new FileOutputStream(outputPath)) {
+            file.write(buffer, 0, buffer.length);
 
-    static {
-        gson = new Gson();
-    }
-
-    @NotNull
-    public static <T> T fromJson(@NotNull String string, @NotNull Type classOfT) {
-        return gson.fromJson(string, classOfT);
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
     }
 }

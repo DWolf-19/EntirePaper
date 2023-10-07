@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2023 DWolf Nineteen & The JPD-API contributors
+Copyright (c) 2023 DWolf Nineteen & The EntirePaper contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,12 +19,23 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-package com.dwolfnineteen.jpdapi.exceptions;
+package com.dwolfnineteen.entirepaper.utils;
 
 import org.jetbrains.annotations.NotNull;
 
-public class VersionGroupNotFoundException extends APIException {
-    public VersionGroupNotFoundException(@NotNull String versionGroup) {
-        super(String.format("Version group '%s' not found", versionGroup));
+public class DownloadContext {
+    private final String projectID;
+    private final String version;
+    private final int build;
+
+    public DownloadContext(@NotNull String projectID, @NotNull String version, int build) {
+        this.projectID = projectID;
+        this.version = version;
+        this.build = build;
+    }
+
+    @NotNull
+    public String buildContext() {
+        return String.format("projects/%s/versions/%s/builds/%s", projectID, version, build);
     }
 }
