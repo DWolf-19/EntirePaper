@@ -28,7 +28,8 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":lib"))
+    implementation(project(":paper"))
+    implementation(project(":hangar"))
 }
 
 java {

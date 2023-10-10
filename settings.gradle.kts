@@ -21,5 +21,12 @@ SOFTWARE.
 */
 rootProject.name = "EntirePaper"
 
-include("lib")
-include("samples")
+include(
+    ":shared",
+    ":paper",
+    ":hangar",
+    ":samples"
+)
+
+// TODO: Remove after sorting
+include(":lib")
