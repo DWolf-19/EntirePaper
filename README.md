@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This repository is no longer maintained and will never receive any updates.
+
 # EntirePaper
 ![EntirePaper](banner.png)
 --
